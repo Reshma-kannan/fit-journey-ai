@@ -10,5 +10,5 @@ export const QUOTES = [
 
 export function quoteOfTheDay(date = new Date()): string {
   const day = Math.floor(date.getTime() / 86_400_000);
-  return QUOTES[day % QUOTES.length];
+  return QUOTES[day % QUOTES.length] ?? QUOTES[0]!;
 }
