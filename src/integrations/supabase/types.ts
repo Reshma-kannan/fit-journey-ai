@@ -14,7 +14,189 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      coach_messages: {
+        Row: {
+          content: string
+          created_at: string
+          id: string
+          role: string
+          user_id: string
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          id?: string
+          role: string
+          user_id: string
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: string
+          role?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      daily_logs: {
+        Row: {
+          calories: number
+          created_at: string
+          id: string
+          log_date: string
+          user_id: string
+          water_ml: number
+        }
+        Insert: {
+          calories?: number
+          created_at?: string
+          id?: string
+          log_date?: string
+          user_id: string
+          water_ml?: number
+        }
+        Update: {
+          calories?: number
+          created_at?: string
+          id?: string
+          log_date?: string
+          user_id?: string
+          water_ml?: number
+        }
+        Relationships: []
+      }
+      personal_records: {
+        Row: {
+          achieved_on: string
+          created_at: string
+          exercise: string
+          id: string
+          reps: number
+          user_id: string
+          weight_kg: number
+        }
+        Insert: {
+          achieved_on?: string
+          created_at?: string
+          exercise: string
+          id?: string
+          reps?: number
+          user_id: string
+          weight_kg: number
+        }
+        Update: {
+          achieved_on?: string
+          created_at?: string
+          exercise?: string
+          id?: string
+          reps?: number
+          user_id?: string
+          weight_kg?: number
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          age: number | null
+          allergies: string | null
+          created_at: string
+          days_per_week: number | null
+          diet: string | null
+          experience: string | null
+          goal: string | null
+          height_cm: number | null
+          id: string
+          name: string
+          onboarded: boolean
+          updated_at: string
+          weight_kg: number | null
+        }
+        Insert: {
+          age?: number | null
+          allergies?: string | null
+          created_at?: string
+          days_per_week?: number | null
+          diet?: string | null
+          experience?: string | null
+          goal?: string | null
+          height_cm?: number | null
+          id: string
+          name?: string
+          onboarded?: boolean
+          updated_at?: string
+          weight_kg?: number | null
+        }
+        Update: {
+          age?: number | null
+          allergies?: string | null
+          created_at?: string
+          days_per_week?: number | null
+          diet?: string | null
+          experience?: string | null
+          goal?: string | null
+          height_cm?: number | null
+          id?: string
+          name?: string
+          onboarded?: boolean
+          updated_at?: string
+          weight_kg?: number | null
+        }
+        Relationships: []
+      }
+      weight_entries: {
+        Row: {
+          created_at: string
+          id: string
+          logged_on: string
+          user_id: string
+          weight_kg: number
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          logged_on?: string
+          user_id: string
+          weight_kg: number
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          logged_on?: string
+          user_id?: string
+          weight_kg?: number
+        }
+        Relationships: []
+      }
+      workout_sessions: {
+        Row: {
+          completed: boolean
+          created_at: string
+          id: string
+          plan_day: string
+          session_date: string
+          title: string
+          user_id: string
+        }
+        Insert: {
+          completed?: boolean
+          created_at?: string
+          id?: string
+          plan_day?: string
+          session_date?: string
+          title?: string
+          user_id: string
+        }
+        Update: {
+          completed?: boolean
+          created_at?: string
+          id?: string
+          plan_day?: string
+          session_date?: string
+          title?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
